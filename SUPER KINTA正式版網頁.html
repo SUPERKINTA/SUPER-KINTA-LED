@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+      SUPER KINTA 汽車LED大燈 | 官方網頁 請支持正版店家拒絕盜版
+    </title>
+    <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+        header {
+            background: url('https://www.kwax.tw/path/to/your/high-resolution-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeIn 2s;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            animation: fadeIn 2s 1s both;
+            margin: 10px 0;
+        }
+
+        header .description {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            max-width: 600px;
+            line-height: 1.5;
+            animation: fadeIn 2s 1.5s both;
+        }
+
+        header img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            animation: fadeIn 2s 2s both;
+        }
+
+        .content {
+            display: none;
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product,
+        .post,
+        .testimonial,
+        .partner {
+            background-color: #222;
+            padding: 20px;
+            width: calc(50% - 40px);
+            box-sizing: border-box;
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .product img,
+        .post img,
+        .testimonial img,
+        .partner img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .product:hover,
+        .post:hover,
+        .testimonial:hover,
+        .partner:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+
+        .buy-options {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .buy-options select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+        }
+
+        .buy-options button {
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 5px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .buy-options button:hover {
+            background-color: #ff7043;
+            transform: scale(1.05);
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .carousel img {
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .faq {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .faq-question:after {
+            content: '\002B'; /* Plus sign */
+            font-size: 1.2rem;
+            position: absolute;
+            right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #444;
+            padding: 0 15px;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .faq-question.active:after {
+            transform: rotate(45deg); /* Rotate plus to make it a minus */
+        }
+
+        .faq-question.active + .faq-answer {
+            max-height: 200px;
+            padding: 15px;
+        }
+
+        .warranty-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .warranty-link a {
+            color: #ff5722;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 1px solid #ff5722;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .warranty-link a:hover {
+            background-color: #ff5722;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .post-detail img {
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .post-detail {
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        .post-detail h2 {
+            margin-top: 0;
+        }
+
+        .partner-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .partner-info div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .certified {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product,
+            .post,
+            .testimonial,
+            .partner {
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            header .description {
+                font-size: 1rem;
+            }
+        }
+
+        .half {
+            width: 45%;
+        }
+
+        .blog-post {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-post img {
+            width: 45%;
+            border-radius: 10px;
+        }
+
+        .blog-post div {
+            width: 50%;
+            padding: 0 20px;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content-wrapper {
+            flex: 1; /* 使內容區域擴展以填充剩餘空間 */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: auto; /* 保證頁腳在頁面底部 */
+        }
+    </style>
+    <style>
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .carousel img {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        header h1,
+        header p {
+            margin: 10px 0;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content {
+            display: none;
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .images-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .images-grid .image-container {
+            width: 100%;
+            max-width: 45%;
+        }
+
+        .images-grid img {
+            width: 100%;
+            border-radius: 10px;
+            max-width: 700px; /* 添加最大寬度 */
+            max-height: 600px; /* 添加最大高度 */
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .images-grid .image-container {
+                max-width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content-wrapper {
+            flex: 1;
+        }
+
+        .images-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .images-grid .image-container {
+            width: 100%;
+            max-width: 45%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .images-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        @keyframes rainbow-text-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .rainbow-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-clip: text;
+            animation: rainbow-text-animation 10s ease infinite;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+    <style>
+        .testimonial-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .star-rating {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .carousel img {
+            width: 300px;
+            height: auto;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .thumbnail {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+    </style>
+    <style>
+      .blog-post {
+          background-color: #222;
+          padding: 20px;
+          border-radius: 10px;
+          transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          box-sizing: border-box;
+          max-width: 700px;
+      }
+  
+      .blog-post:hover {
+          transform: scale(1.05);
+          background-color: #333;
+          box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+      }
+  
+      .blog-post img {
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 15px;
+          transition: transform 0.3s;
+      }
+  
+      .blog-post img:hover {
+          transform: scale(1.1);
+      }
+  
+      .post-content {
+          text-align: center;
+          flex-grow: 1;
+      }
+  
+      .blog-post h3 {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+          color: #00FAFE;
+          text-shadow: 0 0 10px rgba(0, 250, 254, 0.7);
+          transition: color 0.3s, text-shadow 0.3s;
+      }
+  
+      .blog-post:hover h3 {
+          color: #ff5722;
+          text-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
+      }
+  
+      .blog-post p {
+          font-size: 1.1rem;
+          line-height: 1.5;
+          transition: color 0.3s;
+      }
+  
+      .blog-post:hover p {
+          color: #ccc;
+      }
+  
+      .grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+      }
+  
+      @media (max-width: 768px) {
+          .blog-post {
+              width: 100%;
+          }
+  
+          .blog-post h3 {
+              font-size: 1.3rem;
+          }
+  
+          .blog-post p {
+              font-size: 1rem;
+          }
+      }
+  </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img alt="商標" src="https://live.staticflickr.com/65535/53862512033_b4a595505b_o.png">
+      </div>
+      <a href="#" onclick="showSection('home')">首頁</a> <a href="#" onclick="showSection('products')">產品介紹</a> <a href="#" onclick="showSection('about')">關於我們</a> <a href="#" onclick="showSection('testimonials')">客戶評價</a> <a href="#" onclick="showSection('blog')">最新消息</a> <a href="#" onclick="showSection('purchase')">產品購買</a> <a href="#" onclick="showSection('warranty')">產品保固登記</a> <a href="#" onclick="showSection('partners')">SUPERKINTA 合作商</a>
+    </nav>
+
+    <div class="content-wrapper">
+      <header class="content active" id="home">
+        <div>
+          <h1>
+            官方正版 SUPER KINTA 汽車LED大燈
+          </h1>
+
+          <h2>
+            追求極致亮度與穩定性
+          </h2>
+
+          <p>
+            SUPER KINTA 為您的愛車提供最先進的LED照明技術。我們的產品具有優越的亮度和穩定性，確保您在駕駛時擁有最佳的視野和安全性。
+          </p>
+
+          <p>
+            立即選擇我們的產品，享受前所未有的駕駛體驗。
+          </p>
+        </div>
+
+        <div class="images-grid">
+          <div class="image-container">
+            <img alt="SUPER KINTA 產品展示 1" onclick="openModal(this)" src="https://live.staticflickr.com/65535/53862524238_2a3c0099f5_o.jpg">
+          </div>
+
+          <div class="image-container">
+            <img alt="SUPER KINTA 產品展示 2" onclick="openModal(this)" src="https://live.staticflickr.com/65535/53862687825_ab5e9ecf89_h.jpg">
+          </div>
+
+          <div class="image-container">
+            <img alt="SUPER KINTA 產品展示 3" onclick="openModal(this)" src="https://live.staticflickr.com/65535/53862524233_785bb7f45b_h.jpg">
+          </div>
+
+          <div class="image-container">
+            <h2 class="highlight-text">
+              有關LED燈Q&A請點擊產品介紹下方有常見Q&A問題說明。<br>
+              購買SUPER KINTA請到我們指定的店家/合作商，品質才有保證
+            </h2>
+          </div>
+        </div>
+      </header>
+      <!-- 模式1 -->
+
+      <div class="modal" id="myModal">
+        <span class="close" onclick="closeModal()">&times;</span> <img class="modal-content" id="img01">
+      </div>
+
+      <div class="content" id="products">
+        <section class="section products">
+          <h2>
+            產品介紹
+          </h2>
+
+          <div class="grid">
+            <div class="product">
+              <img alt="K7-PLUS | K7S" src="https://live.staticflickr.com/65535/53862688170_608935268d_c.jpg">
+              <h3>
+                <strong style="color: #00FAFE;">K7-PLUS | K7S【頂級旗艦版 亮度首選】</strong>
+              </h3>
+
+              <p>
+                K7-PLUS | K7S分別為250W/180W<br>
+                適用所有車輛，鹵素燈改LED燈 OR LED燈泡升級等<br>
+                適用插頭：H1 | H4 | H7 | H8H9H11 | 9005【HB3】 | 9006【HB4】 | 9012【HIR2】<br>
+              </p>
+            </div>
+
+            <div class="product">
+              <img alt="F5【創新之光】" src="https://live.staticflickr.com/65535/53862964948_c26d47622d_o.png">
+              <h3>
+                <strong style="color: #00FAFE;">F5【創新之光，適用各種路況】</strong>
+              </h3>
+
+              <p>
+                F5獨家5色創新之光，獨領風騷<br>
+                適用所有車輛，鹵素燈改LED燈 OR LED燈泡升級等<br>
+                適用插頭：H1 | H4 | H7 | H8H9H11 | 9005【HB3】 | 9006【HB4】 | 9012【HIR2】<br>
+              </p>
+            </div>
+
+            <div class="product">
+              <img alt="D系列直上" src="https://live.staticflickr.com/65535/53862718916_c808a61d99_o.png">
+              <h3>
+                <strong style="color: #00FAFE;">D系列直上【頂級旗艦版 亮度首選】</strong>
+              </h3>
+
+              <p>
+                最強D系列LED大燈 散熱佳亮度強 性能第一<br>
+                適用所有車輛，原廠HID燈泡升級LED<br>
+                適用規格：D1S/R | D3S/R<br>
+              </p>
+            </div>
+
+            <div class="product">
+              <img alt="D系列直插" src="https://live.staticflickr.com/65535/53862718826_1be8a1da35_o.png">
+              <h3>
+                <strong style="color: #00FAFE;">D系列直插【頂級旗艦版 亮度首選 全面升級 拒絕老款】</strong>
+              </h3>
+
+              <p>
+                最強D系列LED大燈 【散熱佳亮度強全面升級 性能第一 拒絕老款】<br>
+                適用所有車輛，原廠HID燈泡升級LED<br>
+                <br>
+              </p>
+            </div>
+          </div>
+
+          <section class="section faq">
+            <h2>
+              常見問題Q&A
+            </h2>
+
+            <div class="faq">
+              <div class="faq-item">
+                <div class="faq-question">
+                  問題 1：鹵素燈泡改LED的優點是什麼呢？
+                </div>
+
+                <div class="faq-answer">
+                  1.壽命較長 2.亮度大大提升 3.夜晚跑國道/跑山更加安全加倍。
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  問題 2：我該如何選擇什麼樣的LED燈？
+                </div>
+
+                <div class="faq-answer">
+                  1.有K7-PLUS KS7 F5 D系列 2.原車假如是鹵素燈可以參考K7-PLUS KS7 F5 3.假如要極致亮請選擇K7-PLUS
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  問題 3：購買SUPER KINTA產品有保固嗎？
+                </div>
+
+                <div class="faq-answer">
+                  保固有的 K7-PLUS 15個月其餘都12個月 可以加購延長保固時間
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  問題 4：改裝LED請問合法嗎？
+                </div>
+
+                <div class="faq-answer">
+                  大燈類目前單純替換燈泡無法變更行照，其餘位置只要燈色符合法規，就是合法的喲！<br>
+                  遠近燈：黃光 / 白光<br>
+                  煞車燈：紅光<br>
+                  方向燈：橘黃光 / 紅光(部分車款合法)<br>
+                  車牌燈：白光 / 黃光<br>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  問題 5：購買後多久出貨？
+                </div>
+
+                <div class="faq-answer">
+                  當天極速發貨，保證全蝦皮最快【選擇蝦皮隔日到 今天出貨隔天到貨】
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  問題 6：購買後需要線上填寫保固資料嗎？
+                </div>
+
+                <div class="faq-answer">
+                  是的需要的，這是攸關您的保固權利，請實際填寫，亂寫保固是不成了~~
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  問題 7：請問原廠HID燈泡能升級嗎？
+                </div>
+
+                <div class="faq-answer">
+                  可以升級LED大燈，前提需要確認您車上的型號，假如D1S就只能買D1S系列，S/R到了LED上是沒所差別的，可以安心購買使用
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+
+      <div class="content" id="about">
+        <section class="section about">
+          <section>
+            <h2>
+              關於我們
+            </h2>
+
+            <p>
+              SUPER KINTA 是一家專注於高性能汽車LED燈的領先品牌。我們致力於為車主提供最先進、最可靠的照明解決方案，提升駕駛體驗的安全性和愉悅感。
+            </p>
+
+            <h3>
+              品牌歷史
+            </h3>
+
+            <p>
+              SUPER KINTA 成立於2024年，自成立以來，我們始終堅持技術創新和品質至上的理念。我們開發的LED大燈在台灣市場上以亮度和強度著稱，並在蝦皮平台上被譽為最亮的台灣品牌。
+            </p>
+
+            <h3>
+              我們的使命
+            </h3>
+
+            <ul>
+              <li>
+                <strong>提升駕駛安全：</strong>提供高亮度、耐用且可靠的LED燈，確保夜間駕駛和惡劣天氣下的視野更清晰，從而提升整體駕駛安全。
+              </li>
+
+              <li>
+                <strong>引領技術創新：</strong>不斷追求技術突破，開發出更高效能和更智能的照明產品，以滿足市場不斷變化的需求。
+              </li>
+
+              <li>
+                <strong>客戶至上：</strong>我們始終把客戶的需求放在首位，提供專業的售前、售中和售後服務，確保每位客戶的滿意度。
+              </li>
+            </ul>
+
+            <h3>
+              我們的未來
+            </h3>
+
+            <p>
+              展望未來，SUPER KINTA 將繼續致力於技術創新和品質提升，為全球車主提供最先進的照明解決方案。我們相信，通過不懈的努力和創新，我們將實現更大的成就，成為業界的標杆。
+            </p>
+
+            <p>
+              感謝您選擇 SUPER KINTA，我們期待與您一起駛向光明未來。
+            </p>
+
+            <h3>
+              創始人的經歷
+            </h3>
+
+            <p>
+              在創立 SUPER KINTA 之前，我已經積累了豐富的電商經驗。六年前，我開始在蝦皮平台上銷售木軌道玩具、各種玩具車電池及RC遙控車電池，並提供專業的輔助販售服務。這些經歷使我在市場運營和客戶服務方面積累了豐富的經驗，為 SUPER KINTA 的創立和發展奠定了堅實的基礎。我們以高品質的產品和卓越的售後服務，成為您信賴的選擇。
+            </p>
+            <img alt="關於我們圖片" src="https://hyfilms.com.tw/wp-content/uploads/2023/10/company-image-advertising-4.jpg">
+          </section>
+        </section>
+      </div>
+
+      <div class="content" id="testimonials">
+        <section class="section testimonials">
+          <h2>
+            客戶評價
+          </h2>
+
+          <div class="grid">
+            <div class="testimonial" onclick="showTestimonialDetail('customerA')">
+              <img alt="客戶A" src="https://live.staticflickr.com/65535/53865027695_0294cdea54_q.jpg">
+              <div class="star-rating">
+                <span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span>
+              </div>
+
+              <h3>
+                非常棒的產品！<br>我購買了SUPER KINTA的汽車燈，光線非常明亮且均勻，安裝也十分簡便。用了幾個月後，性能依然如新，強烈推薦給需要高品質車燈的車主。
+
+              </h3>
+            </div>
+
+            <div class="testimonial" onclick="showTestimonialDetail('customerB')">
+              <img alt="客戶B" src="https://live.staticflickr.com/65535/53865027695_0294cdea54_q.jpg">
+              <div class="star-rating">
+                <span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span>
+              </div>
+
+              <h3>
+                可靠的選擇！<br>SUPER KINTA的汽車燈不僅外觀設計時尚，亮度也超乎我的預期。客服態度很好，解答了我所有的疑問。這是一個值得信賴的品牌，讓我購買得非常安心。
+              </h3>
+            </div>
+
+            <div class="testimonial" onclick="showTestimonialDetail('customerC')">
+              <img alt="客戶C" src="https://live.staticflickr.com/65535/53865027695_0294cdea54_q.jpg">
+              <div class="star-rating">
+                <span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span>
+              </div>
+
+              <h3>
+                驚人的出貨速度！<br>購買了SUPER KINTA的汽車燈，除了產品本身質量卓越外，出貨速度更是令人驚喜。下單後很快就收到了貨品，迫不及待地安裝使用。燈光效果完美，推薦給所有需要高品質車燈的車主。
+              </h3>
+            </div>
+
+            <div class="testimonial" onclick="showTestimonialDetail('customerD')">
+              <img alt="客戶D" src="https://live.staticflickr.com/65535/53865027695_0294cdea54_q.jpg">
+              <div class="star-rating">
+                <span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span><span class="star">🌟</span>
+              </div>
+
+              <h3>
+                出色的品質與服務！<br>在朋友推薦下選擇了SUPER KINTA，結果非常滿意。燈具質量一流，使用起來非常穩定。客服服務態度優良，整個購物體驗令人愉快。我一定會再次購買並推薦給其他車友。
+              </h3>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="content" id="blog">
+        <section class="section blog">
+            <h2>最新消息</h2>
+            <div class="grid">
+                <div class="blog-post" onclick="showPostDetail('led-advantages')">
+                    <img alt="選擇SUPER KINTA LED大燈的五大關鍵優勢" src="https://img.shoplineapp.com/media/image_clips/614327cfc362e10032237e40/original.jpg?1631791055">
+                    <div class="post-content">
+                        <h3>選擇SUPER KINTA LED大燈的五大關鍵優勢</h3>
+                        <p>1.超高亮度<br>2.卓越的照射距離<br>3.超越鹵素大燈的性能<br>4.無損安裝升級<br>5.適用各種行車環境<br>6.台灣品牌亮度第一</p>
+                    </div>
+                </div>
+    
+                <div class="blog-post" onclick="showPostDetail('how-to-choose')">
+                    <img alt="SUPERKINTA 即將上市敬請期待" src="https://live.staticflickr.com/65535/53862688170_608935268d_c.jpg">
+                    <div class="post-content">
+                        <h3>SUPERKINTA 即將上市敬請期待</h3>
+                        <p>台灣品牌亮度第一💪<br>30顆大燈芯<br>無損安裝<br>完美匹配原廠</p>
+                    </div>
+                </div>
+    
+                <div class="blog-post" onclick="showPostDetail('product-updates')">
+                    <img alt="👉爭取合作商/特約安裝車/經銷商👈" src="https://media.istockphoto.com/id/1551179151/zh/%E7%85%A7%E7%89%87/hr-manager-hand-or-employer-chooses-takes-in-hand-employee-leader-stands-out-from-crowd-looking.jpg?s=612x612&w=0&k=20&c=NivYh70XFsd0TKu5OSSiPY1xaEvxc7WP-EyKe712OLo=">
+                    <div class="post-content">
+                        <h3>👉爭取合作商/特約安裝車/經銷商👈</h3>
+                        <p>我們誠摯邀請各位優秀的汽車配件商和專業安裝車廠成為SUPER KINTA的合作夥伴。通過合作，我們將共同提升LED大燈市場的品質和服務，創造更多商機。</p>
+                    </div>
+                </div>
+
+              </div>
+        </section>
+    </div>
+         
+      
+      <div class="content" id="purchase">
+        <section class="section purchase">
+          <h2>
+            產品購買【還在建構中 現在購買請先前往 
+            <a href="https://shopee.tw/elisa668" target="_blank" style="color: #00FAFE; text-decoration: none;">台中新動力</a> 購買 這裡未來開放】
+          </h2>
+          
+
+          <div class="grid">
+            <div class="product">
+              <img alt="K系列" src="https://live.staticflickr.com/65535/53862688170_608935268d_c.jpg">
+              <h3>
+                💪K7-PLUS | K7S
+              </h3>
+
+              <p>
+                K7-PLUS | K7S分別為【250W/180W】<br>
+                適用所有車輛<br>
+                <br>
+                適用插頭：H1 | H4 | H7 | H8 H9 H11 | 9005【HB3】 | 9006【HB4】 | 9012【HIR2】
+              </p>
+
+              <div class="buy-options">
+                <select id="kSeriesSelect" onchange="updatePrice('kSeriesSelect', 'kSeriesPrice')">
+                  <option value="#">
+                    選擇型號
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💪極致首選【K7-PLUS 250W】H1 - $1790 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💪極致首選【K7-PLUS 250W】H4 - $1790 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💪極致首選【K7-PLUS 250W】H7 - $1790 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💪極致首選【K7-PLUS 250W】H8 H9 H11 - $1790 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💪極致首選【K7-PLUS 250W】9005【HB3】 - $1790 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💪極致首選【K7-PLUS 250W】9006【HB4】 - $1790 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💪極致首選【K7-PLUS 250W】9012【HIR2】 - $1790 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💯超越原廠【K7S 180W】H1 - $1299 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💯超越原廠【K7S 180W】H4 - $1299 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💯超越原廠【K7S 180W】H7 - $1299 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💯超越原廠【K7S 180W】H8 H9 H11 - $1299 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💯超越原廠【K7S 180W】9005【HB3】 - $1299 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💯超越原廠【K7S 180W】9006【HB4】 - $1299 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    💯超越原廠【K7S 180W】9012【HIR2】 - $1299 |【1顆】
+                  </option>
+                </select>
+                <div class="price" id="kSeriesPrice">
+                </div>
+                <button class="buy-button" onclick="purchase('kSeriesSelect')"><i class="fas fa-shopping-cart"></i> 立即購買</button>
+              </div>
+            </div>
+
+            <div class="product">
+              <img alt="F系列" src="https://live.staticflickr.com/65535/53862964948_c26d47622d_o.png">
+              <h3>
+                🌟F5 獨家5色
+              </h3>
+
+              <p>
+                F5 獨家5色<br>
+                適用所有車輛<br>
+                <br>
+                適用插頭：H1 | H4 | H7 | H8 H9 H11 | 9005【HB3】 | 9006【HB4】 | 9012【HIR2】
+              </p>
+
+              <div class="buy-options">
+                <select id="fSeriesSelect" onchange="updatePrice('fSeriesSelect', 'fSeriesPrice')">
+                  <option value="#">
+                    選擇型號
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    🌟創新之光【F5獨家5色】H1 - $699 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    🌟創新之光【F5獨家5色】H4 - $699 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    🌟創新之光【F5獨家5色】H7 - $699 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    🌟創新之光【F5獨家5色】H8 H9 H11 - $699 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    🌟創新之光【F5獨家5色】9005【HB3】 - $699 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    🌟創新之光【F5獨家5色】9006【HB4】 - $699 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    🌟創新之光【F5獨家5色】9012【HIR2】 - $699 |【1顆】
+                  </option>
+                </select>
+                <div class="price" id="fSeriesPrice">
+                </div>
+                <button class="buy-button" onclick="purchase('fSeriesSelect')"><i class="fas fa-shopping-cart"></i> 立即購買</button>
+              </div>
+            </div>
+
+            <div class="product">
+              <img alt="D系列直上" src="https://live.staticflickr.com/65535/53862718916_c808a61d99_o.png">
+              <h3>
+                💯D系列直上【頂級旗艦版】
+              </h3>
+
+              <p>
+                原車HID無損升級<br>
+                適用規格：D1S/R | D3S/R<br>
+                購買前請注意，假如原車是配合D1S系列的請購買D1S系列的 S跟R在LED方面是沒有差別的 這個指針對HID才要看S/R
+              </p>
+
+              <div class="buy-options">
+                <select id="dSeriesSelect" onchange="updatePrice('dSeriesSelect', 'dSeriesPrice')">
+                  <option value="#">
+                    選擇型號
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    ✅D系列直上【適用D1S/R】 - $1390 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    ✅D系列直上【適用D3S/R】 - $1390 |【1顆】
+                  </option>
+                </select>
+                <div class="price" id="dSeriesPrice">
+                </div>
+                <button class="buy-button" onclick="purchase('dSeriesSelect')"><i class="fas fa-shopping-cart"></i> 立即購買</button>
+              </div>
+            </div>
+
+            <div class="product">
+              <img alt="D系列直插" src="https://live.staticflickr.com/65535/53862718826_1be8a1da35_o.png">
+              <h3>
+                💯D系列直插【頂級旗艦版】
+              </h3>
+
+              <p>
+                原車HID無損升級<br>
+                適用規格：D2S/R | D4S/R<br>
+                購買前請注意，假如原車是配合D1S系列的請購買D1S系列的 S跟R在LED方面是沒有差別的 這個指針對HID才要看S/R
+              </p>
+
+              <div class="buy-options">
+                <select id="gSeriesSelect" onchange="updatePrice('gSeriesSelect', 'gSeriesPrice')">
+                  <option value="#">
+                    選擇型號
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    ✅D系列直插【適用D2S/R】 - $1390 |【1顆】
+                  </option>
+                  <option value="https://example.com/k1|500">
+                    ✅D系列直插【適用D4S/R】 - $1390 |【1顆】
+                  </option>
+                </select>
+                <div class="price" id="gSeriesPrice">
+                </div>
+                <button class="buy-button" onclick="purchase('gSeriesSelect')"><i class="fas fa-shopping-cart"></i> 立即購買</button>
+              </div>
+            </div>
+            <section class="section faq">
+              <h2>
+                常見問題Q&A
+              </h2>
+  
+              <div class="faq">
+                <div class="faq-item">
+                  <div class="faq-question">
+                    問題 1：請問何時能開放線上購買呢？
+                  </div>
+  
+                  <div class="faq-answer">
+                    我們設置好了 就會開放線上購買。
+                  </div>
+                </div>
+  
+                <div class="faq-item">
+                  <div class="faq-question">
+                    問題 2：為什麼7-11 全家 OK運費比蝦皮貴呢？
+                  </div>
+  
+                  <div class="faq-answer">
+                    這些是金流供應商提供的，價格是無法改變的
+                  </div>
+                </div>
+  
+                <div class="faq-item">
+                  <div class="faq-question">
+                    問題 3：購買後何時出貨呢？
+                  </div>
+  
+                  <div class="faq-answer">
+                    不管是蝦皮購買 還是官網 保證今日出貨！
+                  </div>
+                </div>
+  
+                <div class="faq-item">
+                  <div class="faq-question">
+                    問題 4：請問產品有7天鑑賞期嗎？
+                  </div>
+  
+                  <div class="faq-answer">
+                    7天鑑賞期內，您可以考慮是否安裝使用，但請注意這並非試用期。一旦拆封，即表示您同意購買，無法退貨。
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+          </div>
+        </section>
+      </div>
+
+      
+      <div class="content" id="warranty">
+        <section class="section warranty">
+          <h2 style="font-size: 2.5rem;">
+            產品保固登記
+          </h2>
+          <img alt="Warranty Image" src="https://live.staticflickr.com/65535/53862680034_711498412f_o.png" style="width: 100%; max-width: 800px; margin-bottom: 20px;">
+          <p style="font-size: 1.2rem;">
+            感謝您購買 SUPER KINTA 的產品。我們非常重視您的滿意度，為了確保您享有最佳的售後服務，請按照以下步驟進行產品保固登記：
+          </p>
+
+          <ol style="font-size: 1.2rem; text-align: left; max-width: 800px; margin: 0 auto;">
+            <li>準備您的購買證明文件（保證卡+機身序號+蝦皮訂單截圖）。
+            </li>
+
+            <li>點擊下方鏈接進入保固登記表單。
+            </li>
+
+            <li>填寫您的個人資料及產品資訊，並上傳購買證明文件。
+            </li>
+
+            <li>提交表單後，您會收到一份副本。
+            </li>
+
+            <li>我們的客服團隊將在 1~2 個工作日內審核，假如有異常會聊聊與您連線。
+            </li>
+          </ol>
+
+          <p style="font-size: 1.2rem;">
+            如果您在登記過程中遇到任何問題，請隨時聯繫我們的客服團隊。
+          </p>
+
+          <div class="warranty-link" style="margin-top: 20px;">
+            <a href="https://forms.gle/tKWokrK37uhd2iMJA" style="font-size: 1.2rem; padding: 10px 20px; border: 1px solid #ff5722; border-radius: 5px; color: #ff5722; text-decoration: none; transition: background-color 0.3s, color 0.3s;" target="_blank">點擊此處進行產品保固登記</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="content" id="partners">
+        <section class="section partners">
+          <h2>
+            特許經銷商 | 合作商+特約安裝車廠
+          </h2>
+
+          <div class="grid">
+            <div class="partner">
+              <img alt="蝦皮新動力" src="https://live.staticflickr.com/65535/53864607181_21e671484f_o.png">
+              <div class="partner-info">
+                <div>
+                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">台中新動力</span>
+                </div>
+
+                <div>
+                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
+                </div>
+
+                <div style="font-size: 18px; color: #00FAFE;">
+                  <span>蝦皮鏈接:</span> 
+                  <span>
+                      <a href="https://shopee.tw/elisa668" target="_blank" style="color: #00FAFE; text-decoration: none; font-weight: bold;">台中新動力</a>
+                  </span>
+              </div>
+              </div>
+
+              <div class="certified">
+                <strong>✅官方總店</strong>
+              </div>
+              <div class="certified">
+                <strong>🚚極速發貨</strong>
+              </div>
+              <div class="certified">
+                <strong>✅正品保證</strong>
+              </div>
+              <div class="certified">
+              <strong> 💳多元支付 | 可面交</strong>
+              </div>
+            </div>
+
+            <div class="partner">
+              <img alt="蝦皮倍樂" src="https://live.staticflickr.com/65535/53863674887_903db423c3_o.png">
+              <div class="partner-info">
+                <div>
+                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">台灣倍樂</span>
+                </div>
+
+                <div>
+                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
+                </div>
+
+                <div style="font-size: 18px; color: #00FAFE;">
+                  <span>蝦皮鏈接:</span> 
+                  <span>
+                      <a href="https://shopee.tw/bryan948888" target="_blank" style="color: #00FAFE; text-decoration: none; font-weight: bold;">台中倍樂</a>
+                  </span>
+              </div>
+              </div>
+
+              <div class="certified">
+                <strong>✅官方經銷</strong>
+              </div>
+              <div class="certified">
+                <strong>🚚極速發貨</strong>
+              </div>
+              <div class="certified">
+                <strong>✅正品保證</strong>
+              </div>
+              <div class="certified">
+              <strong>💳可線上購買 | 可面交</strong>
+              </div>
+            </div>
+
+            <div class="partner">
+              <img alt="SUPER KINTA" src="https://live.staticflickr.com/65535/53865027695_0294cdea54_q.jpg">
+              <div class="partner-info">
+                <div>
+                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">超級鯨特</span>
+                </div>
+
+                <div>
+                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
+                </div>
+
+                <div style="font-size: 18px; color: #00FAFE;">
+                  <span>官網購買:</span> 
+                  <span>
+                    <a href="#" onclick="showSection('purchase')" style="color: #00FAFE; text-decoration: none; font-weight: bold;">立即購買</a>
+                  </span>
+              </div>
+              </div>
+
+              <div class="certified">
+                <strong>✅官方網站</strong>
+              </div>
+              <div class="certified">
+                <strong>🚚極速發貨</strong>
+              </div>
+              <div class="certified">
+                <strong>✅正品保證</strong>
+              </div>
+              <div class="certified">
+              <strong>💳可線上購買 | 可面交</strong>
+              </div>
+            </div>
+
+            <div class="partner">
+              <img alt="蝦皮貝樂創意" src="https://live.staticflickr.com/65535/53863674887_903db423c3_o.png">
+              <div class="partner-info">
+                <div>
+                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">貝樂創意</span>
+                </div>
+
+                <div>
+                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
+                </div>
+
+                <div style="font-size: 18px; color: #00FAFE;">
+                  <span>蝦皮鏈接:</span> 
+                  <span>
+                      <a href="https://shopee.tw/bvyam94888" target="_blank" style="color: #00FAFE; text-decoration: none; font-weight: bold;">貝樂創意</a>
+                  </span>
+              </div>
+              </div>
+
+              <div class="certified">
+                <strong>✅官方經銷</strong>
+              </div>
+              <div class="certified">
+                <strong>🚚極速發貨</strong>
+              </div>
+              <div class="certified">
+                <strong>✅正品保證</strong>
+              </div>
+              <div class="certified">
+              <strong>💳可線上購買 | 可面交</strong>
+              </div>
+            </div>
+            <div class="partner">
+              <img alt="徵求合作商+特約安裝廠" src="https://live.staticflickr.com/65535/53863750882_4e3a607296_q.jpg">
+              <div class="partner-info">
+                <div>
+                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">請提供您的店名</span>
+                </div>
+
+                <div>
+                  <span>產品銷售項目:</span> <span>請到台中新動力洽談</span>
+                </div>
+
+                <div style="font-size: 18px; color: #00FAFE;">
+                  <span>徵求合作商+特約安裝廠:</span> 
+                  <span style="color: #00FAFE; text-decoration: none; font-weight: bold;">希望與您攜手合作</span>
+              </div>
+              </div>
+
+              <div class="certified">
+                <strong>✅<a href="https://shopee.tw/elisa668" target="_blank" style="color: inherit; text-decoration: none;">徵求店家【想了解請到台中新動力洽談】</a></strong>
+                <a href="https://shopee.tw/elisa668" target="_blank" class="gradient-button" style="color: rgb(0, 247, 255); padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-left: 10px;"><strong>立即點擊立即了解</strong></a>
+              </div>
+              
+              <style>
+              .gradient-button {
+                background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, pink, cyan, red);
+                background-size: 300% 300%;
+                animation: gradient-flow 15s ease infinite, pulse 2s infinite;
+                display: inline-block;
+                transition: transform 0.2s;
+                box-shadow: 0 4px 15px rgb(144, 0, 255);
+                border: 2px solid #7300ff;
+              }
+              
+              @keyframes gradient-flow {
+                0% {
+                  background-position: 0% 50%;
+                }
+                50% {
+                  background-position: 100% 50%;
+                }
+                100% {
+                  background-position: 0% 50%;
+                }
+              }
+              
+              @keyframes pulse {
+                0%, 100% {
+                  transform: scale(1);
+                }
+                50% {
+                  transform: scale(1.1);
+                }
+              }
+              </style>
+                     
+              
+            </div>
+            <div class="partner">
+              <img alt="徵求合作商+特約安裝廠" src="https://live.staticflickr.com/65535/53863750882_4e3a607296_q.jpg">
+              <div class="partner-info">
+                <div>
+                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">請提供您的店名</span>
+                </div>
+
+                <div>
+                  <span>產品銷售項目:</span> <span>請到台中新動力洽談</span>
+                </div>
+
+                <div style="font-size: 18px; color: #00FAFE;">
+                  <span>徵求合作商+特約安裝廠:</span> 
+                  <span style="color: #00FAFE; text-decoration: none; font-weight: bold;">希望與您攜手合作</span>
+              </div>
+              </div>
+
+              <div class="certified">
+                <strong>✅<a href="https://shopee.tw/elisa668" target="_blank" style="color: inherit; text-decoration: none;">徵求店家【想了解請到台中新動力洽談】</a></strong>
+                <a href="https://shopee.tw/elisa668" target="_blank" class="gradient-button" style="color: rgb(0, 247, 255); padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-left: 10px;"><strong>立即點擊立即了解</strong></a>
+              </div>
+              
+              <style>
+              .gradient-button {
+                background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, pink, cyan, red);
+                background-size: 300% 300%;
+                animation: gradient-flow 15s ease infinite, pulse 2s infinite;
+                display: inline-block;
+                transition: transform 0.2s;
+                box-shadow: 0 4px 15px rgb(144, 0, 255);
+                border: 2px solid #7300ff;
+              }
+              
+              @keyframes gradient-flow {
+                0% {
+                  background-position: 0% 50%;
+                }
+                50% {
+                  background-position: 100% 50%;
+                }
+                100% {
+                  background-position: 0% 50%;
+                }
+              }
+              
+              @keyframes pulse {
+                0%, 100% {
+                  transform: scale(1);
+                }
+                50% {
+                  transform: scale(1.1);
+                }
+              }
+              </style>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 200px;">
+            <img alt="SUPER KINTA" src="https://live.staticflickr.com/65535/53862512033_b4a595505b_o.png" style="max-width: 150px; margin-bottom: 10px;">
+            <p>
+              &copy; 2024 SUPER KINTA. 保留所有權利，盜用必究。
+            </p>
+          </div>
+
+          <div style="flex: 1; min-width: 200px;">
+            <div style="flex: 1; min-width: 200px;">
+              <h2>
+                <strong style="color: #00FAFE;">🇹🇼台灣品牌</strong>
+              </h2>
+
+              <p>
+                <strong style="color: #00FAFE;">🔆亮度第一</strong>
+              </p>
+
+              <p>
+                <strong style="color: #00FAFE;">💪品質保證</strong>
+              </p>
+
+              <p>
+                <strong style="color: #00FAFE;">🚚當天極速發貨</strong>
+              </p>
+            </div>
+          </div>
+
+          <div style="flex: 1; min-width: 200px;">
+            <p>
+              <strong>聯繫SUPER KINTA【成為合作廠商請聯繫我們】</strong>
+            </p>
+
+            <p>
+              <strong>【台灣倍樂 |貝樂創意工作室未來會上架 現在購買請到台中新動力購買💯 】</strong>
+            </p>
+
+            <p>
+              電子郵件: <a href="mailto:superkinta.led@gmail.com" style="color: #00FAFE; text-decoration: none;">superkinta.led@gmail.com</a>
+            </p>
+
+            <p>
+              蝦皮【台中新動力 ✅總店】<a href="https://shopee.tw/elisa668" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/elisa668</a>
+            </p>
+
+            <p>
+              蝦皮【台灣倍樂 ✅特許經銷商】<a href="https://shopee.tw/bryan948888" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/bryan948888</a>
+            </p>
+
+            <p>
+              蝦皮【貝樂創意工作室 ✅特許經銷商】<a href="https://shopee.tw/bvyam94888" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/bvyam94888</a>
+            </p>
+          </div>
+
+          <div style="flex: 1; min-width: 200px;">
+            <p>
+              <strong>關注SUPER KINTA</strong>
+            </p>
+            <a href="https://shopee.tw/elisa668" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台中新動力】" src="https://cd.nccu.edu.tw/uploads/company/c36b70ced7f9d04cf36dfb7c5687bc25.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台中新動力】</span></a> <a href="https://shopee.tw/bryan948888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台灣倍樂玩具】" src="https://cd.nccu.edu.tw/uploads/company/c36b70ced7f9d04cf36dfb7c5687bc25.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台灣倍樂玩具】</span></a> <a href="https://shopee.tw/bvyam94888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【貝樂創意工作室】" src="https://cd.nccu.edu.tw/uploads/company/c36b70ced7f9d04cf36dfb7c5687bc25.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【貝樂創意工作室】</span></a> <a href="https://www.youtube.com/@SUPERKINTA" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="YouTube" src="https://i.pinimg.com/736x/d2/0e/f6/d20ef62b2183376cbd6f1df28151edf1.jpg" style="width: 50px; margin-right: 5px;"> <span>官方SUPER KINTA 頻道</span></a>
+          </div>
+        </div>
+      </footer>
+      <script>
+            function showSection(sectionId) {
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(sectionId).classList.add('active');
+            }
+
+            function updatePrice(selectId, priceId) {
+                const select = document.getElementById(selectId);
+                const price = select.options[select.selectedIndex].text.split('- $')[1];
+                document.getElementById(priceId).innerText = price ? `$${price}` : '';
+            }
+
+            function purchase(selectId) {
+                const select = document.getElementById(selectId);
+                const url = select.value.split('|')[0];
+                if (url !== '#') {
+                    window.open(url, '_blank');
+                } else {
+                    alert('請選擇型號');
+                }
+            }
+
+            let carouselIndex = 0;
+            const carouselImages = document.querySelectorAll('.carousel img');
+            function showNextImage() {
+                carouselImages[carouselIndex].style.transform = 'translateX(-100%)';
+                carouselIndex = (carouselIndex + 1) % carouselImages.length;
+                carouselImages[carouselIndex].style.transform = 'translateX(0)';
+            }
+            setInterval(showNextImage, 3000);
+
+            function showPostDetail(postId) {
+                const posts = {
+                    'led-advantages': {
+                        title: '選擇SUPER KINTA LED大燈的五大關鍵優勢',
+                        image: 'https://img.shoplineapp.com/media/image_clips/614327cfc362e10032237e40/original.jpg?1631791055',
+                        content: '1.超高亮度<br> 2.卓越的照射距離 <br>3.超越鹵素大燈的性能 <br>4.無損安裝升級 <br>5.適用各種行車環境<br> 6.台灣品牌亮度第一'
+                    },
+                    'how-to-choose': {
+                        title: 'SUPERKINTA 即將上市敬請期待',
+                        image: 'https://live.staticflickr.com/65535/53862688170_608935268d_c.jpg',
+                        content: '台灣品牌亮度第一💪'
+                    },
+                    'product-updates': {
+                        title: '👉爭取合作商/特約安裝車/經銷商👈',
+                        image: 'https://media.istockphoto.com/id/1551179151/zh/%E7%85%A7%E7%89%87/hr-manager-hand-or-employer-chooses-takes-in-hand-employee-leader-stands-out-from-crowd-looking.jpg?s=612x612&w=0&k=20&c=NivYh70XFsd0TKu5OSSiPY1xaEvxc7WP-EyKe712OLo=',
+                        content: '我們誠摯邀請各位優秀的汽車配件商和專業安裝車廠成為SUPER KINTA的合作夥伴。通過合作，我們將共同提升LED大燈市場的品質和服務，創造更多商機。'
+                    },
+                };
+
+                const post = posts[postId];
+                if (post) {
+                    const detailSection = document.createElement('section');
+                    detailSection.classList.add('section', 'post-detail');
+                    detailSection.innerHTML = `
+                        <h2>${post.title}<\/h2>
+                        <img src="${post.image}" alt="${post.title}">
+                        <p>${post.content}<\/p>
+                        <button onclick="closePostDetail()">返回<\/button>
+                    `;
+                    document.body.appendChild(detailSection);
+                    showSection('post-detail');
+                }
+            }
+
+            function closePostDetail() {
+                const detailSection = document.querySelector('.post-detail');
+                if (detailSection) {
+                    detailSection.remove();
+                    showSection('blog');
+                }
+            }
+
+            document.querySelectorAll('.faq-question').forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    const answer = item.nextElementSibling;
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else {
+                        answer.style.maxHeight = "0";
+                    }
+                });
+            });
+      </script> 
+      <script>
+            function showTestimonialDetail(customerId) {
+                const testimonials = {
+                    'customerA': {
+                        name: '客戶A',
+                        rating: 4,
+                        review: '這是我用過最好的LED大燈！',
+                        images: [
+                            'https://cdn2.ettoday.net/images/5320/5320485.jpg',
+                            'https://cdn2.ettoday.net/images/5320/5320486.jpg',
+                            'https://today-obs.line-scdn.net/0hm2Y71hs8Mh1kTiU3x7hNSlwYPmxXKCgURi51fhVPPH9MYiFCCHxhfkBJPzFBKXdLRHstfxQcbClJeidCUA/w644'
+                        ]
+                    },
+
+                };
+
+                const testimonial = testimonials[customerId];
+                if (testimonial) {
+                    const detailSection = document.createElement('section');
+                    detailSection.classList.add('section', 'testimonial-detail');
+                    detailSection.innerHTML = `
+                        <h2>${testimonial.name}<\/h2>
+                        <div class="star-rating">${'🌟'.repeat(testimonial.rating)}${'☆'.repeat(5 - testimonial.rating)}<\/div>
+                        <p>${testimonial.review}<\/p>
+                        <div class="carousel">
+                            ${testimonial.images.map((img, index) => `<img src="${img}" alt="${testimonial.name} Image" class="${index === 0 ? 'active' : ''}">`).join('')}
+                        <\/div>
+                        <div class="thumbnail-container">
+                            ${testimonial.images.map((img, index) => `<img src="${img}" class="thumbnail" onclick="selectImage(${index})">`).join('')}
+                        <\/div>
+                        <button onclick="closeTestimonialDetail()">返回<\/button>
+                    `;
+                    document.body.appendChild(detailSection);
+                    showSection('testimonial-detail');
+                }
+            }
+
+            function selectImage(index) {
+                const images = document.querySelectorAll('.carousel img');
+                images.forEach(img => img.classList.remove('active'));
+                images[index].classList.add('active');
+            }
+
+            function closeTestimonialDetail() {
+                const detailSection = document.querySelector('.testimonial-detail');
+                if (detailSection) {
+                    detailSection.remove();
+                    showSection('testimonials');
+                }
+            }
+
+            function showSection(sectionId) {
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(sectionId).classList.add('active');
+            }
+
+            // Example: Display testimonial for 'customerA'
+            // showTestimonialDetail('customerA');
+      </script> 
+      <script>
+            let carouselIndex = 0;
+            const carouselImages = document.querySelectorAll('.carousel img');
+
+            function showNextImage() {
+                carouselImages.forEach((img, index) => {
+                    img.style.transform = `translateX(${(index - carouselIndex) * 100}%)`;
+                });
+                carouselIndex = (carouselIndex + 1) % carouselImages.length;
+            }
+
+            setInterval(showNextImage, 3000);
+      </script> 
+      <script>
+            function openModal(button) {
+                var modal = document.getElementById("myModal");
+                var modalImg = document.getElementById("img01");
+                var img = button.parentElement.previousElementSibling;
+                modal.style.display = "block";
+                modalImg.src = img.src;
+
+                // Show the close button
+                var closeButton = button.nextElementSibling;
+                closeButton.style.display = "inline-block";
+                button.style.display = "none";
+            }
+
+            function closeModal(button) {
+                if (button) {
+                    var modal = document.getElementById("myModal");
+                    modal.style.display = "none";
+
+                    // Hide the close button and show the open button
+                    button.style.display = "none";
+                    var openButton = button.previousElementSibling;
+                    openButton.style.display = "inline-block";
+                } else {
+                    var modal = document.getElementById("myModal");
+                    modal.style.display = "none";
+
+                    // Hide all close buttons
+                    var closeButtons = document.querySelectorAll('.close-btn');
+                    closeButtons.forEach(function (btn) {
+                        btn.style.display = "none";
+                    });
+
+                    // Show all open buttons
+                    var openButtons = document.querySelectorAll('.buttons button:first-child');
+                    openButtons.forEach(function (btn) {
+                        btn.style.display = "inline-block";
+                    });
+                }
+            }
+      </script> 
+      <script>
+        function showSection(sectionId) {
+            // 隱藏所有內容部分
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+
+            // 顯示選定的內容部分
+            var selectedContent = document.getElementById(sectionId);
+            selectedContent.classList.add('active');
+
+            // 自動滾動到選定的內容部分
+            setTimeout(function() {
+                selectedContent.scrollIntoView({ behavior: 'smooth' });
+            }, 0);
+        }
+    </script>
+    </div>
+  </body>
+</html>
