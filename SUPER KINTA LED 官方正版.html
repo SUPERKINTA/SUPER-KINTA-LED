@@ -861,112 +861,106 @@
   }
      </style>
      <style>
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-  }
-  
-  nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
-  }
-  
-  nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
-  }
-  
-  nav a:hover {
-      background-color: #444;
-  }
-  
-  header {
-      text-align: center;
-      padding: 60px 20px;
-  }
-  
-  header h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-  }
-  
-  header p {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  .content {
-      display: none;
-      padding: 80px 20px;
-      min-height: 100vh;
-  }
-  
-  .active {
-      display: block;
-  }
-  
-  .images-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-  }
-  
-  .images-grid .image-container {
-      width: 100%;
-      max-width: 45%;
-      height: auto;
-  }
-  
-  .images-grid img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 10px;
-  }
-  
-  footer {
-      background-color: #111;
-      padding: 20px;
-      text-align: center;
-      margin-top: 40px;
-  }
-  
-  @media (max-width: 768px) {
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #000;
+          color: #fff;
+          overflow-x: hidden;
+      }
+
+      nav {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          padding: 10px 0;
+          display: flex;
+          justify-content: center;
+          z-index: 1000;
+      }
+
+      nav a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 15px;
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s, color 0.3s;
+      }
+
+      nav a:hover {
+          background-color: #444;
+      }
+
       header {
-          padding-top: 100px; /* 為移動設備增加頂部填充以避免內容被導航欄遮擋 */
+          text-align: center;
+          padding: 60px 20px;
       }
-  
-      .images-grid .image-container {
-          max-width: 100%;
-      }
-  
+
       header h1 {
-          font-size: 2.5rem;
+          font-size: 3rem;
+          margin-bottom: 20px;
       }
-  
+
       header p {
-          font-size: 1rem;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
       }
-  }
-   </style>
+
+      .content {
+          display: none;
+          padding: 80px 20px;
+          min-height: 100vh;
+      }
+
+      .active {
+          display: block;
+      }
+
+      .images-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 20px;
+      }
+
+      .images-grid .image-container {
+          width: 100%;
+          max-width: 45%;
+          height: auto;
+      }
+
+      .images-grid img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 10px;
+      }
+
+      footer {
+          background-color: #111;
+          padding: 20px;
+          text-align: center;
+          margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+          header h1 {
+              font-size: 2.5rem;
+          }
+
+          header p {
+              font-size: 1rem;
+          }
+      }
+  </style>
+  
   </head>
   <body>
     <nav>
@@ -980,28 +974,27 @@
       <header class="content active" id="home">
         <div>
             <h1>官方正版 SUPER KINTA 汽車LED大燈</h1>
-            <h2>追求極致亮度與穩定性</h2>
             <p>SUPER KINTA 為您的愛車提供最先進的LED照明技術。我們的產品具有優越的亮度和穩定性，確保您在駕駛時擁有最佳的視野和安全性。</p>
             <p>立即選擇我們的產品，享受前所未有的駕駛體驗。</p>
         </div>
         <div class="images-grid">
-            <div class="image-container">
-                <img alt="SUPER KINTA 產品展示 1" onclick="openModal(this)" src="https://live.staticflickr.com/65535/53862524238_2a3c0099f5_o.jpg">
-            </div>
-            <div class="image-container">
-                <img alt="SUPER KINTA 產品展示 2" onclick="openModal(this)" src="https://live.staticflickr.com/65535/53862687825_ab5e9ecf89_h.jpg">
-            </div>
-            <div class="image-container">
-                <img alt="SUPER KINTA 產品展示 3" onclick="openModal(this)" src="https://live.staticflickr.com/65535/53862524233_785bb7f45b_h.jpg">
-            </div>
-            <div class="image-container">
-                <h2 class="highlight-text">
-                    有關LED燈Q&A請點擊產品介紹下方有常見Q&A問題說明。<br>
-                    購買SUPER KINTA請到我們指定的店家/合作商，品質才有保證
-                </h2>
-            </div>
+          <div class="image-container">
+            <img alt="SUPER KINTA 產品展示 1" src="https://live.staticflickr.com/65535/53862524238_2a3c0099f5_o.jpg">
+          </div>
+          <div class="image-container">
+            <img alt="SUPER KINTA 產品展示 2" src="https://live.staticflickr.com/65535/53862687825_ab5e9ecf89_h.jpg">
+          </div>
+          <div class="image-container">
+            <img alt="SUPER KINTA 產品展示 3" src="https://live.staticflickr.com/65535/53862524233_785bb7f45b_h.jpg">
+          </div>
+          <div class="image-container">
+            <h2 class="highlight-text">
+              有關LED燈Q&A請點擊產品介紹下方有常見Q&A問題說明。<br>
+              購買SUPER KINTA請到我們指定的店家/合作商，品質才有保證
+            </h2>
+          </div>
         </div>
-    </header>
+      </header>
       <!-- 模式1 -->
 
       <div class="modal" id="myModal">
@@ -1194,7 +1187,7 @@
             </h3>
 
             <p>
-              展望未來，SUPER KINTA 將繼續致力於技術創新和品質提升，為全球車主提供最先進的照明解決方案。我們相信，通過不懈的努力和創新，我們將實現更大的成就，成為業界的標杆。
+              展望未來，SUPER KINTA 將繼續致力於技術創新和品質提升，為全球車主提供最先進的照明解決方案。我們相信，通過不懈的努力和創新，我們將實現更大的成就，成為業界的標桿。
             </p>
 
             <p>
@@ -2203,5 +2196,6 @@
       window.addEventListener('load', adjustLayout);
       window.addEventListener('resize', adjustLayout);
     </script>
+    
   </body>
 </html>
