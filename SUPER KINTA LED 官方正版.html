@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUPER KINTA 汽車LED大燈 | 官方網頁 請支持正版店家拒絕盜版</title>
-  <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+      SUPER KINTA 汽車LED大燈 | 官方網頁 請支持正版店家拒絕盜版
+    </title>
+    <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -620,29 +622,29 @@
           box-sizing: border-box;
           max-width: 700px;
       }
-  
+
       .blog-post:hover {
           transform: scale(1.05);
           background-color: #333;
           box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
       }
-  
+
       .blog-post img {
           width: 100%;
           border-radius: 10px;
           margin-bottom: 15px;
           transition: transform 0.3s;
       }
-  
+
       .blog-post img:hover {
           transform: scale(1.1);
       }
-  
+
       .post-content {
           text-align: center;
           flex-grow: 1;
       }
-  
+
       .blog-post h3 {
           font-size: 1.5rem;
           margin-bottom: 10px;
@@ -650,61 +652,86 @@
           text-shadow: 0 0 10px rgba(0, 250, 254, 0.7);
           transition: color 0.3s, text-shadow 0.3s;
       }
-  
+
       .blog-post:hover h3 {
           color: #ff5722;
           text-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
       }
-  
+
       .blog-post p {
           font-size: 1.1rem;
           line-height: 1.5;
           transition: color 0.3s;
       }
-  
+
       .blog-post:hover p {
           color: #ccc;
       }
-  
+
       .grid {
           display: flex;
           flex-wrap: wrap;
           gap: 20px;
           justify-content: center;
       }
-  
+
       @media (max-width: 768px) {
           .blog-post {
               width: 100%;
           }
-  
+
           .blog-post h3 {
               font-size: 1.3rem;
           }
-  
+
           .blog-post p {
               font-size: 1rem;
           }
       }
-  </style>
-  <style>
-    /* 基本導航樣式 */
+    </style>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
     nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 0;
       display: flex;
-      justify-content: space-around;
-      background-color: #000000;
-      padding: 10px;
+      justify-content: center;
+      z-index: 1000;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      padding: 10px;
+      margin: 0 15px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     nav a:hover {
-      background-color: #ddd;
-      color: black;
+      background-color: #444;
+      color: #fff;
+    }
+
+    .content {
+      display: none;
+      padding: 80px 20px;
+      min-height: 100vh;
+    }
+
+    .active {
+      display: block;
     }
 
     /* 移動設備上的導航樣式 */
@@ -724,20 +751,19 @@
         background-color: #000000;
         text-align: left;
       }
-    }
 
-    /* 顯示移動菜單的類 */
-    .show {
-      display: block !important;
+      .nav-link.show {
+        display: block; /* 顯示移動菜單的鏈接 */
+      }
     }
-  </style>
+    </style>
   </head>
   <body>
     <nav>
       <div class="logo">
         <img alt="商標" src="https://live.staticflickr.com/65535/53862512033_b4a595505b_o.png">
       </div>
-      <a href="#" onclick="showSection('home')">首頁</a> <a href="#" onclick="showSection('products')">產品介紹</a> <a href="#" onclick="showSection('about')">關於我們</a> <a href="#" onclick="showSection('testimonials')">客戶評價</a> <a href="#" onclick="showSection('blog')">最新消息</a> <a href="#" onclick="showSection('purchase')">產品購買</a> <a href="#" onclick="showSection('warranty')">產品保固登記</a> <a href="#" onclick="showSection('partners')">SUPERKINTA 合作商</a>
+      <a class="menu-item" href="javascript:void(0);" onclick="toggleMenu()">☰ 選單</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('home')">首頁</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('products')">產品介紹</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('about')">關於我們</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('testimonials')">客戶評價</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('blog')">最新消息</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('purchase')">產品購買</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('warranty')">產品保固登記</a> <a class="nav-link" href="javascript:void(0);" onclick="showSection('partners')">SUPERKINTA 合作商</a>
     </nav>
 
     <div class="content-wrapper">
@@ -1006,8 +1032,8 @@
               </div>
 
               <h3>
-                非常棒的產品！<br>我購買了SUPER KINTA的汽車燈，光線非常明亮且均勻，安裝也十分簡便。用了幾個月後，性能依然如新，強烈推薦給需要高品質車燈的車主。
-
+                非常棒的產品！<br>
+                我購買了SUPER KINTA的汽車燈，光線非常明亮且均勻，安裝也十分簡便。用了幾個月後，性能依然如新，強烈推薦給需要高品質車燈的車主。
               </h3>
             </div>
 
@@ -1018,7 +1044,8 @@
               </div>
 
               <h3>
-                可靠的選擇！<br>SUPER KINTA的汽車燈不僅外觀設計時尚，亮度也超乎我的預期。客服態度很好，解答了我所有的疑問。這是一個值得信賴的品牌，讓我購買得非常安心。
+                可靠的選擇！<br>
+                SUPER KINTA的汽車燈不僅外觀設計時尚，亮度也超乎我的預期。客服態度很好，解答了我所有的疑問。這是一個值得信賴的品牌，讓我購買得非常安心。
               </h3>
             </div>
 
@@ -1029,7 +1056,8 @@
               </div>
 
               <h3>
-                驚人的出貨速度！<br>購買了SUPER KINTA的汽車燈，除了產品本身質量卓越外，出貨速度更是令人驚喜。下單後很快就收到了貨品，迫不及待地安裝使用。燈光效果完美，推薦給所有需要高品質車燈的車主。
+                驚人的出貨速度！<br>
+                購買了SUPER KINTA的汽車燈，除了產品本身質量卓越外，出貨速度更是令人驚喜。下單後很快就收到了貨品，迫不及待地安裝使用。燈光效果完美，推薦給所有需要高品質車燈的車主。
               </h3>
             </div>
 
@@ -1040,7 +1068,8 @@
               </div>
 
               <h3>
-                出色的品質與服務！<br>在朋友推薦下選擇了SUPER KINTA，結果非常滿意。燈具質量一流，使用起來非常穩定。客服服務態度優良，整個購物體驗令人愉快。我一定會再次購買並推薦給其他車友。
+                出色的品質與服務！<br>
+                在朋友推薦下選擇了SUPER KINTA，結果非常滿意。燈具質量一流，使用起來非常穩定。客服服務態度優良，整個購物體驗令人愉快。我一定會再次購買並推薦給其他車友。
               </h3>
             </div>
           </div>
@@ -1049,44 +1078,66 @@
 
       <div class="content" id="blog">
         <section class="section blog">
-            <h2>最新消息</h2>
-            <div class="grid">
-                <div class="blog-post" onclick="showPostDetail('led-advantages')">
-                    <img alt="選擇SUPER KINTA LED大燈的五大關鍵優勢" src="https://img.shoplineapp.com/media/image_clips/614327cfc362e10032237e40/original.jpg?1631791055">
-                    <div class="post-content">
-                        <h3>選擇SUPER KINTA LED大燈的五大關鍵優勢</h3>
-                        <p>1.超高亮度<br>2.卓越的照射距離<br>3.超越鹵素大燈的性能<br>4.無損安裝升級<br>5.適用各種行車環境<br>6.台灣品牌亮度第一</p>
-                    </div>
-                </div>
-    
-                <div class="blog-post" onclick="showPostDetail('how-to-choose')">
-                    <img alt="SUPERKINTA 即將上市敬請期待" src="https://live.staticflickr.com/65535/53862688170_608935268d_c.jpg">
-                    <div class="post-content">
-                        <h3>SUPERKINTA 即將上市敬請期待</h3>
-                        <p>台灣品牌亮度第一💪<br>30顆大燈芯<br>無損安裝<br>完美匹配原廠</p>
-                    </div>
-                </div>
-    
-                <div class="blog-post" onclick="showPostDetail('product-updates')">
-                    <img alt="👉爭取合作商/特約安裝車/經銷商👈" src="https://media.istockphoto.com/id/1551179151/zh/%E7%85%A7%E7%89%87/hr-manager-hand-or-employer-chooses-takes-in-hand-employee-leader-stands-out-from-crowd-looking.jpg?s=612x612&w=0&k=20&c=NivYh70XFsd0TKu5OSSiPY1xaEvxc7WP-EyKe712OLo=">
-                    <div class="post-content">
-                        <h3>👉爭取合作商/特約安裝車/經銷商👈</h3>
-                        <p>我們誠摯邀請各位優秀的汽車配件商和專業安裝車廠成為SUPER KINTA的合作夥伴。通過合作，我們將共同提升LED大燈市場的品質和服務，創造更多商機。</p>
-                    </div>
-                </div>
+          <h2>
+            最新消息
+          </h2>
 
+          <div class="grid">
+            <div class="blog-post" onclick="showPostDetail('led-advantages')">
+              <img alt="選擇SUPER KINTA LED大燈的五大關鍵優勢" src="https://img.shoplineapp.com/media/image_clips/614327cfc362e10032237e40/original.jpg?1631791055">
+              <div class="post-content">
+                <h3>
+                  選擇SUPER KINTA LED大燈的五大關鍵優勢
+                </h3>
+
+                <p>
+                  1.超高亮度<br>
+                  2.卓越的照射距離<br>
+                  3.超越鹵素大燈的性能<br>
+                  4.無損安裝升級<br>
+                  5.適用各種行車環境<br>
+                  6.台灣品牌亮度第一
+                </p>
               </div>
+            </div>
+
+            <div class="blog-post" onclick="showPostDetail('how-to-choose')">
+              <img alt="SUPERKINTA 即將上市敬請期待" src="https://live.staticflickr.com/65535/53862688170_608935268d_c.jpg">
+              <div class="post-content">
+                <h3>
+                  SUPERKINTA 即將上市敬請期待
+                </h3>
+
+                <p>
+                  台灣品牌亮度第一💪<br>
+                  30顆大燈芯<br>
+                  無損安裝<br>
+                  完美匹配原廠
+                </p>
+              </div>
+            </div>
+
+            <div class="blog-post" onclick="showPostDetail('product-updates')">
+              <img alt="👉爭取合作商/特約安裝車/經銷商👈" src="https://media.istockphoto.com/id/1551179151/zh/%E7%85%A7%E7%89%87/hr-manager-hand-or-employer-chooses-takes-in-hand-employee-leader-stands-out-from-crowd-looking.jpg?s=612x612&w=0&k=20&c=NivYh70XFsd0TKu5OSSiPY1xaEvxc7WP-EyKe712OLo=">
+              <div class="post-content">
+                <h3>
+                  👉爭取合作商/特約安裝車/經銷商👈
+                </h3>
+
+                <p>
+                  我們誠摯邀請各位優秀的汽車配件商和專業安裝車廠成為SUPER KINTA的合作夥伴。通過合作，我們將共同提升LED大燈市場的品質和服務，創造更多商機。
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
-    </div>
-         
-      
+      </div>
+
       <div class="content" id="purchase">
         <section class="section purchase">
           <h2>
-            產品購買【還在建構中 現在購買請先前往 
-            <a href="https://shopee.tw/elisa668" target="_blank" style="color: #00FAFE; text-decoration: none;">台中新動力</a> 購買 這裡未來開放】
+            產品購買【還在建構中 現在購買請先前往 <a href="https://shopee.tw/elisa668" style="color: #00FAFE; text-decoration: none;" target="_blank">台中新動力</a> 購買 這裡未來開放】
           </h2>
-          
 
           <div class="grid">
             <div class="product">
@@ -1261,258 +1312,255 @@
                 <button class="buy-button" onclick="purchase('gSeriesSelect')"><i class="fas fa-shopping-cart"></i> 立即購買</button>
               </div>
             </div>
+
             <section class="section faq">
               <h2>
                 常見問題Q&A
               </h2>
-  
+
               <div class="faq">
                 <div class="faq-item">
                   <div class="faq-question">
                     問題 1：請問何時能開放線上購買呢？
                   </div>
-  
+
                   <div class="faq-answer">
                     我們設置好了 就會開放線上購買。
                   </div>
                 </div>
-  
+
                 <div class="faq-item">
                   <div class="faq-question">
                     問題 2：為什麼7-11 全家 OK運費比蝦皮貴呢？
                   </div>
-  
+
                   <div class="faq-answer">
                     這些是金流供應商提供的，價格是無法改變的
                   </div>
                 </div>
-  
+
                 <div class="faq-item">
                   <div class="faq-question">
                     問題 3：購買後何時出貨呢？
                   </div>
-  
+
                   <div class="faq-answer">
                     不管是蝦皮購買 還是官網 保證今日出貨！
                   </div>
                 </div>
-  
+
                 <div class="faq-item">
                   <div class="faq-question">
                     問題 4：請問產品有7天鑑賞期嗎？
                   </div>
-  
+
                   <div class="faq-answer">
                     7天鑑賞期內，您可以考慮是否安裝使用，但請注意這並非試用期。一旦拆封，即表示您同意購買，無法退貨。
                   </div>
                 </div>
               </div>
             </section>
-          </section>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="content" id="warranty">
+      <section class="section warranty">
+        <h2 style="font-size: 2.5rem;">
+          產品保固登記
+        </h2>
+        <img alt="Warranty Image" src="https://live.staticflickr.com/65535/53862680034_711498412f_o.png" style="width: 100%; max-width: 800px; margin-bottom: 20px;">
+        <p style="font-size: 1.2rem;">
+          感謝您購買 SUPER KINTA 的產品。我們非常重視您的滿意度，為了確保您享有最佳的售後服務，請按照以下步驟進行產品保固登記：
+        </p>
+
+        <ol style="font-size: 1.2rem; text-align: left; max-width: 800px; margin: 0 auto;">
+          <li>準備您的購買證明文件（保證卡+機身序號+蝦皮訂單截圖）。
+          </li>
+
+          <li>點擊下方鏈接進入保固登記表單。
+          </li>
+
+          <li>填寫您的個人資料及產品資訊，並上傳購買證明文件。
+          </li>
+
+          <li>提交表單後，您會收到一份副本。
+          </li>
+
+          <li>我們的客服團隊將在 1~2 個工作日內審核，假如有異常會聊聊與您連線。
+          </li>
+        </ol>
+
+        <p style="font-size: 1.2rem;">
+          如果您在登記過程中遇到任何問題，請隨時聯繫我們的客服團隊。
+        </p>
+
+        <div class="warranty-link" style="margin-top: 20px;">
+          <a href="https://forms.gle/tKWokrK37uhd2iMJA" style="font-size: 1.2rem; padding: 10px 20px; border: 1px solid #ff5722; border-radius: 5px; color: #ff5722; text-decoration: none; transition: background-color 0.3s, color 0.3s;" target="_blank">點擊此處進行產品保固登記</a>
         </div>
+      </section>
+    </div>
+
+    <div class="content" id="partners">
+      <section class="section partners">
+        <h2>
+          特許經銷商 | 合作商+特約安裝車廠
+        </h2>
+
+        <div class="grid">
+          <div class="partner">
+            <img alt="蝦皮新動力" src="https://live.staticflickr.com/65535/53864607181_21e671484f_o.png">
+            <div class="partner-info">
+              <div>
+                <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">台中新動力</span>
+              </div>
+
+              <div>
+                <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
+              </div>
+
+              <div style="font-size: 18px; color: #00FAFE;">
+                <span>蝦皮鏈接:</span> <span><a href="https://shopee.tw/elisa668" style="color: #00FAFE; text-decoration: none; font-weight: bold;" target="_blank">台中新動力</a></span>
+              </div>
+            </div>
+
+            <div class="certified">
+              <strong>✅官方總店</strong>
+            </div>
+
+            <div class="certified">
+              <strong>🚚極速發貨</strong>
+            </div>
+
+            <div class="certified">
+              <strong>✅正品保證</strong>
+            </div>
+
+            <div class="certified">
+              <strong>💳多元支付 | 可面交</strong>
+            </div>
           </div>
-        </section>
-      </div>
 
-      
-      <div class="content" id="warranty">
-        <section class="section warranty">
-          <h2 style="font-size: 2.5rem;">
-            產品保固登記
-          </h2>
-          <img alt="Warranty Image" src="https://live.staticflickr.com/65535/53862680034_711498412f_o.png" style="width: 100%; max-width: 800px; margin-bottom: 20px;">
-          <p style="font-size: 1.2rem;">
-            感謝您購買 SUPER KINTA 的產品。我們非常重視您的滿意度，為了確保您享有最佳的售後服務，請按照以下步驟進行產品保固登記：
-          </p>
+          <div class="partner">
+            <img alt="蝦皮倍樂" src="https://live.staticflickr.com/65535/53863674887_903db423c3_o.png">
+            <div class="partner-info">
+              <div>
+                <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">台灣倍樂</span>
+              </div>
 
-          <ol style="font-size: 1.2rem; text-align: left; max-width: 800px; margin: 0 auto;">
-            <li>準備您的購買證明文件（保證卡+機身序號+蝦皮訂單截圖）。
-            </li>
+              <div>
+                <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
+              </div>
 
-            <li>點擊下方鏈接進入保固登記表單。
-            </li>
+              <div style="font-size: 18px; color: #00FAFE;">
+                <span>蝦皮鏈接:</span> <span><a href="https://shopee.tw/bryan948888" style="color: #00FAFE; text-decoration: none; font-weight: bold;" target="_blank">台中倍樂</a></span>
+              </div>
+            </div>
 
-            <li>填寫您的個人資料及產品資訊，並上傳購買證明文件。
-            </li>
+            <div class="certified">
+              <strong>✅官方經銷</strong>
+            </div>
 
-            <li>提交表單後，您會收到一份副本。
-            </li>
+            <div class="certified">
+              <strong>🚚極速發貨</strong>
+            </div>
 
-            <li>我們的客服團隊將在 1~2 個工作日內審核，假如有異常會聊聊與您連線。
-            </li>
-          </ol>
+            <div class="certified">
+              <strong>✅正品保證</strong>
+            </div>
 
-          <p style="font-size: 1.2rem;">
-            如果您在登記過程中遇到任何問題，請隨時聯繫我們的客服團隊。
-          </p>
-
-          <div class="warranty-link" style="margin-top: 20px;">
-            <a href="https://forms.gle/tKWokrK37uhd2iMJA" style="font-size: 1.2rem; padding: 10px 20px; border: 1px solid #ff5722; border-radius: 5px; color: #ff5722; text-decoration: none; transition: background-color 0.3s, color 0.3s;" target="_blank">點擊此處進行產品保固登記</a>
+            <div class="certified">
+              <strong>💳可線上購買 | 可面交</strong>
+            </div>
           </div>
-        </section>
-      </div>
 
-      <div class="content" id="partners">
-        <section class="section partners">
-          <h2>
-            特許經銷商 | 合作商+特約安裝車廠
-          </h2>
-
-          <div class="grid">
-            <div class="partner">
-              <img alt="蝦皮新動力" src="https://live.staticflickr.com/65535/53864607181_21e671484f_o.png">
-              <div class="partner-info">
-                <div>
-                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">台中新動力</span>
-                </div>
-
-                <div>
-                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
-                </div>
-
-                <div style="font-size: 18px; color: #00FAFE;">
-                  <span>蝦皮鏈接:</span> 
-                  <span>
-                      <a href="https://shopee.tw/elisa668" target="_blank" style="color: #00FAFE; text-decoration: none; font-weight: bold;">台中新動力</a>
-                  </span>
-              </div>
+          <div class="partner">
+            <img alt="SUPER KINTA" src="https://live.staticflickr.com/65535/53865027695_0294cdea54_q.jpg">
+            <div class="partner-info">
+              <div>
+                <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">超級鯨特</span>
               </div>
 
-              <div class="certified">
-                <strong>✅官方總店</strong>
+              <div>
+                <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
               </div>
-              <div class="certified">
-                <strong>🚚極速發貨</strong>
-              </div>
-              <div class="certified">
-                <strong>✅正品保證</strong>
-              </div>
-              <div class="certified">
-              <strong> 💳多元支付 | 可面交</strong>
+
+              <div style="font-size: 18px; color: #00FAFE;">
+                <span>官網購買:</span> <span><a href="#" onclick="showSection('purchase')" style="color: #00FAFE; text-decoration: none; font-weight: bold;">立即購買</a></span>
               </div>
             </div>
 
-            <div class="partner">
-              <img alt="蝦皮倍樂" src="https://live.staticflickr.com/65535/53863674887_903db423c3_o.png">
-              <div class="partner-info">
-                <div>
-                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">台灣倍樂</span>
-                </div>
+            <div class="certified">
+              <strong>✅官方網站</strong>
+            </div>
 
-                <div>
-                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
-                </div>
+            <div class="certified">
+              <strong>🚚極速發貨</strong>
+            </div>
 
-                <div style="font-size: 18px; color: #00FAFE;">
-                  <span>蝦皮鏈接:</span> 
-                  <span>
-                      <a href="https://shopee.tw/bryan948888" target="_blank" style="color: #00FAFE; text-decoration: none; font-weight: bold;">台中倍樂</a>
-                  </span>
-              </div>
-              </div>
+            <div class="certified">
+              <strong>✅正品保證</strong>
+            </div>
 
-              <div class="certified">
-                <strong>✅官方經銷</strong>
-              </div>
-              <div class="certified">
-                <strong>🚚極速發貨</strong>
-              </div>
-              <div class="certified">
-                <strong>✅正品保證</strong>
-              </div>
-              <div class="certified">
+            <div class="certified">
               <strong>💳可線上購買 | 可面交</strong>
+            </div>
+          </div>
+
+          <div class="partner">
+            <img alt="蝦皮貝樂創意" src="https://live.staticflickr.com/65535/53863674887_903db423c3_o.png">
+            <div class="partner-info">
+              <div>
+                <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">貝樂創意</span>
+              </div>
+
+              <div>
+                <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
+              </div>
+
+              <div style="font-size: 18px; color: #00FAFE;">
+                <span>蝦皮鏈接:</span> <span><a href="https://shopee.tw/bvyam94888" style="color: #00FAFE; text-decoration: none; font-weight: bold;" target="_blank">貝樂創意</a></span>
               </div>
             </div>
 
-            <div class="partner">
-              <img alt="SUPER KINTA" src="https://live.staticflickr.com/65535/53865027695_0294cdea54_q.jpg">
-              <div class="partner-info">
-                <div>
-                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">超級鯨特</span>
-                </div>
+            <div class="certified">
+              <strong>✅官方經銷</strong>
+            </div>
 
-                <div>
-                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
-                </div>
+            <div class="certified">
+              <strong>🚚極速發貨</strong>
+            </div>
 
-                <div style="font-size: 18px; color: #00FAFE;">
-                  <span>官網購買:</span> 
-                  <span>
-                    <a href="#" onclick="showSection('purchase')" style="color: #00FAFE; text-decoration: none; font-weight: bold;">立即購買</a>
-                  </span>
-              </div>
-              </div>
+            <div class="certified">
+              <strong>✅正品保證</strong>
+            </div>
 
-              <div class="certified">
-                <strong>✅官方網站</strong>
-              </div>
-              <div class="certified">
-                <strong>🚚極速發貨</strong>
-              </div>
-              <div class="certified">
-                <strong>✅正品保證</strong>
-              </div>
-              <div class="certified">
+            <div class="certified">
               <strong>💳可線上購買 | 可面交</strong>
+            </div>
+          </div>
+
+          <div class="partner">
+            <img alt="徵求合作商+特約安裝廠" src="https://live.staticflickr.com/65535/53863750882_4e3a607296_q.jpg">
+            <div class="partner-info">
+              <div>
+                <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">請提供您的店名</span>
+              </div>
+
+              <div>
+                <span>產品銷售項目:</span> <span>請到台中新動力洽談</span>
+              </div>
+
+              <div style="font-size: 18px; color: #00FAFE;">
+                <span>徵求合作商+特約安裝廠:</span> <span style="color: #00FAFE; text-decoration: none; font-weight: bold;">希望與您攜手合作</span>
               </div>
             </div>
 
-            <div class="partner">
-              <img alt="蝦皮貝樂創意" src="https://live.staticflickr.com/65535/53863674887_903db423c3_o.png">
-              <div class="partner-info">
-                <div>
-                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">貝樂創意</span>
-                </div>
-
-                <div>
-                  <span>產品銷售項目:</span> <span>K7-PLUS | K7S | F5 |D系列直上 | D系列直插</span>
-                </div>
-
-                <div style="font-size: 18px; color: #00FAFE;">
-                  <span>蝦皮鏈接:</span> 
-                  <span>
-                      <a href="https://shopee.tw/bvyam94888" target="_blank" style="color: #00FAFE; text-decoration: none; font-weight: bold;">貝樂創意</a>
-                  </span>
-              </div>
-              </div>
-
-              <div class="certified">
-                <strong>✅官方經銷</strong>
-              </div>
-              <div class="certified">
-                <strong>🚚極速發貨</strong>
-              </div>
-              <div class="certified">
-                <strong>✅正品保證</strong>
-              </div>
-              <div class="certified">
-              <strong>💳可線上購買 | 可面交</strong>
-              </div>
+            <div class="certified">
+              <strong>✅<a href="https://shopee.tw/elisa668" style="color: inherit; text-decoration: none;" target="_blank">徵求店家【想了解請到台中新動力洽談】</a></strong> <a class="gradient-button" href="https://shopee.tw/elisa668" style="color: rgb(0, 247, 255); padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-left: 10px;" target="_blank"><strong>立即點擊立即了解</strong></a>
             </div>
-            <div class="partner">
-              <img alt="徵求合作商+特約安裝廠" src="https://live.staticflickr.com/65535/53863750882_4e3a607296_q.jpg">
-              <div class="partner-info">
-                <div>
-                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">請提供您的店名</span>
-                </div>
-
-                <div>
-                  <span>產品銷售項目:</span> <span>請到台中新動力洽談</span>
-                </div>
-
-                <div style="font-size: 18px; color: #00FAFE;">
-                  <span>徵求合作商+特約安裝廠:</span> 
-                  <span style="color: #00FAFE; text-decoration: none; font-weight: bold;">希望與您攜手合作</span>
-              </div>
-              </div>
-
-              <div class="certified">
-                <strong>✅<a href="https://shopee.tw/elisa668" target="_blank" style="color: inherit; text-decoration: none;">徵求店家【想了解請到台中新動力洽談】</a></strong>
-                <a href="https://shopee.tw/elisa668" target="_blank" class="gradient-button" style="color: rgb(0, 247, 255); padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-left: 10px;"><strong>立即點擊立即了解</strong></a>
-              </div>
-              
-              <style>
+            <style>
               .gradient-button {
                 background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, pink, cyan, red);
                 background-size: 300% 300%;
@@ -1543,33 +1591,29 @@
                   transform: scale(1.1);
                 }
               }
-              </style>
-                     
-              
+            </style>
+          </div>
+
+          <div class="partner">
+            <img alt="徵求合作商+特約安裝廠" src="https://live.staticflickr.com/65535/53863750882_4e3a607296_q.jpg">
+            <div class="partner-info">
+              <div>
+                <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">請提供您的店名</span>
+              </div>
+
+              <div>
+                <span>產品銷售項目:</span> <span>請到台中新動力洽談</span>
+              </div>
+
+              <div style="font-size: 18px; color: #00FAFE;">
+                <span>徵求合作商+特約安裝廠:</span> <span style="color: #00FAFE; text-decoration: none; font-weight: bold;">希望與您攜手合作</span>
+              </div>
             </div>
-            <div class="partner">
-              <img alt="徵求合作商+特約安裝廠" src="https://live.staticflickr.com/65535/53863750882_4e3a607296_q.jpg">
-              <div class="partner-info">
-                <div>
-                  <span style="font-size: 16px;">店名:</span> <span style="font-size: 20px;">請提供您的店名</span>
-                </div>
 
-                <div>
-                  <span>產品銷售項目:</span> <span>請到台中新動力洽談</span>
-                </div>
-
-                <div style="font-size: 18px; color: #00FAFE;">
-                  <span>徵求合作商+特約安裝廠:</span> 
-                  <span style="color: #00FAFE; text-decoration: none; font-weight: bold;">希望與您攜手合作</span>
-              </div>
-              </div>
-
-              <div class="certified">
-                <strong>✅<a href="https://shopee.tw/elisa668" target="_blank" style="color: inherit; text-decoration: none;">徵求店家【想了解請到台中新動力洽談】</a></strong>
-                <a href="https://shopee.tw/elisa668" target="_blank" class="gradient-button" style="color: rgb(0, 247, 255); padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-left: 10px;"><strong>立即點擊立即了解</strong></a>
-              </div>
-              
-              <style>
+            <div class="certified">
+              <strong>✅<a href="https://shopee.tw/elisa668" style="color: inherit; text-decoration: none;" target="_blank">徵求店家【想了解請到台中新動力洽談】</a></strong> <a class="gradient-button" href="https://shopee.tw/elisa668" style="color: rgb(0, 247, 255); padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-left: 10px;" target="_blank"><strong>立即點擊立即了解</strong></a>
+            </div>
+            <style>
               .gradient-button {
                 background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, pink, cyan, red);
                 background-size: 300% 300%;
@@ -1600,76 +1644,76 @@
                   transform: scale(1.1);
                 }
               }
-              </style>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
-        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 200px;">
-            <img alt="SUPER KINTA" src="https://live.staticflickr.com/65535/53862512033_b4a595505b_o.png" style="max-width: 150px; margin-bottom: 10px;">
-            <p>
-              &copy; 2024 SUPER KINTA. 保留所有權利，盜用必究。
-            </p>
-          </div>
-
-          <div style="flex: 1; min-width: 200px;">
-            <div style="flex: 1; min-width: 200px;">
-              <h2>
-                <strong style="color: #00FAFE;">🇹🇼台灣品牌</strong>
-              </h2>
-
-              <p>
-                <strong style="color: #00FAFE;">🔆亮度第一</strong>
-              </p>
-
-              <p>
-                <strong style="color: #00FAFE;">💪品質保證</strong>
-              </p>
-
-              <p>
-                <strong style="color: #00FAFE;">🚚當天極速發貨</strong>
-              </p>
-            </div>
-          </div>
-
-          <div style="flex: 1; min-width: 200px;">
-            <p>
-              <strong>聯繫SUPER KINTA【成為合作廠商請聯繫我們】</strong>
-            </p>
-
-            <p>
-              <strong>【台灣倍樂 |貝樂創意工作室未來會上架 現在購買請到台中新動力購買💯 】</strong>
-            </p>
-
-            <p>
-              電子郵件: <a href="mailto:superkinta.led@gmail.com" style="color: #00FAFE; text-decoration: none;">superkinta.led@gmail.com</a>
-            </p>
-
-            <p>
-              蝦皮【台中新動力 ✅總店】<a href="https://shopee.tw/elisa668" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/elisa668</a>
-            </p>
-
-            <p>
-              蝦皮【台灣倍樂 ✅特許經銷商】<a href="https://shopee.tw/bryan948888" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/bryan948888</a>
-            </p>
-
-            <p>
-              蝦皮【貝樂創意工作室 ✅特許經銷商】<a href="https://shopee.tw/bvyam94888" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/bvyam94888</a>
-            </p>
-          </div>
-
-          <div style="flex: 1; min-width: 200px;">
-            <p>
-              <strong>關注SUPER KINTA</strong>
-            </p>
-            <a href="https://shopee.tw/elisa668" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台中新動力】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台中新動力】</span></a> <a href="https://shopee.tw/bryan948888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台灣倍樂玩具】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台灣倍樂玩具】</span></a> <a href="https://shopee.tw/bvyam94888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【貝樂創意工作室】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【貝樂創意工作室】</span></a> <a href="https://www.youtube.com/@SUPERKINTA" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="YouTube" src="https://i.pinimg.com/736x/d2/0e/f6/d20ef62b2183376cbd6f1df28151edf1.jpg" style="width: 50px; margin-right: 5px;"> <span>官方SUPER KINTA 頻道</span></a>
+            </style>
           </div>
         </div>
-      </footer>
-      <script>
+      </section>
+    </div>
+
+    <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+      <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px;">
+          <img alt="SUPER KINTA" src="https://live.staticflickr.com/65535/53862512033_b4a595505b_o.png" style="max-width: 150px; margin-bottom: 10px;">
+          <p>
+            &copy; 2024 SUPER KINTA. 保留所有權利，盜用必究。
+          </p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <div style="flex: 1; min-width: 200px;">
+            <h2>
+              <strong style="color: #00FAFE;">🇹🇼台灣品牌</strong>
+            </h2>
+
+            <p>
+              <strong style="color: #00FAFE;">🔆亮度第一</strong>
+            </p>
+
+            <p>
+              <strong style="color: #00FAFE;">💪品質保證</strong>
+            </p>
+
+            <p>
+              <strong style="color: #00FAFE;">🚚當天極速發貨</strong>
+            </p>
+          </div>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <p>
+            <strong>聯繫SUPER KINTA【成為合作廠商請聯繫我們】</strong>
+          </p>
+
+          <p>
+            <strong>【台灣倍樂 |貝樂創意工作室未來會上架 現在購買請到台中新動力購買💯 】</strong>
+          </p>
+
+          <p>
+            電子郵件: <a href="mailto:superkinta.led@gmail.com" style="color: #00FAFE; text-decoration: none;">superkinta.led@gmail.com</a>
+          </p>
+
+          <p>
+            蝦皮【台中新動力 ✅總店】<a href="https://shopee.tw/elisa668" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/elisa668</a>
+          </p>
+
+          <p>
+            蝦皮【台灣倍樂 ✅特許經銷商】<a href="https://shopee.tw/bryan948888" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/bryan948888</a>
+          </p>
+
+          <p>
+            蝦皮【貝樂創意工作室 ✅特許經銷商】<a href="https://shopee.tw/bvyam94888" style="color: rgb(0, 250, 254);" target="_blank">https://shopee.tw/bvyam94888</a>
+          </p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <p>
+            <strong>關注SUPER KINTA</strong>
+          </p>
+          <a href="https://shopee.tw/elisa668" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台中新動力】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台中新動力】</span></a> <a href="https://shopee.tw/bryan948888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台灣倍樂玩具】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台灣倍樂玩具】</span></a> <a href="https://shopee.tw/bvyam94888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【貝樂創意工作室】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【貝樂創意工作室】</span></a> <a href="https://www.youtube.com/@SUPERKINTA" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="YouTube" src="https://i.pinimg.com/736x/d2/0e/f6/d20ef62b2183376cbd6f1df28151edf1.jpg" style="width: 50px; margin-right: 5px;"> <span>官方SUPER KINTA 頻道</span></a>
+        </div>
+      </div>
+    </footer>
+    <script>
             function showSection(sectionId) {
                 document.querySelectorAll('.content').forEach(section => {
                     section.classList.remove('active');
@@ -1755,8 +1799,8 @@
                     }
                 });
             });
-      </script> 
-      <script>
+    </script> 
+    <script>
             function showTestimonialDetail(customerId) {
                 const testimonials = {
                     'customerA': {
@@ -1816,8 +1860,8 @@
 
             // Example: Display testimonial for 'customerA'
             // showTestimonialDetail('customerA');
-      </script> 
-      <script>
+    </script> 
+    <script>
             let carouselIndex = 0;
             const carouselImages = document.querySelectorAll('.carousel img');
 
@@ -1829,8 +1873,8 @@
             }
 
             setInterval(showNextImage, 3000);
-      </script> 
-      <script>
+    </script> 
+    <script>
             function openModal(button) {
                 var modal = document.getElementById("myModal");
                 var modalImg = document.getElementById("img01");
@@ -1870,69 +1914,74 @@
                     });
                 }
             }
-      </script> 
-      <script>
-        function showSection(sectionId) {
-            // 隱藏所有內容部分
-            var contents = document.querySelectorAll('.content');
-            contents.forEach(function (content) {
-                content.classList.remove('active');
+    </script> 
+    <script>
+        // 切換移動設備上的導航菜單顯示和隱藏
+        function toggleMenu() {
+          var links = document.querySelectorAll('nav .nav-link');
+          links.forEach(function(link) {
+            link.classList.toggle('show');
+          });
+        }
+
+        // 顯示指定的內容部分
+        function showSection(section) {
+          // 隱藏所有內容部分
+          var contents = document.querySelectorAll('.content');
+          contents.forEach(function(content) {
+            content.classList.remove('active');
+          });
+
+          // 顯示選定的內容部分
+          var selectedContent = document.getElementById(section);
+          selectedContent.classList.add('active');
+
+          // 自動滾動到選定的內容部分
+          setTimeout(function() {
+            selectedContent.scrollIntoView({ behavior: 'smooth' });
+          }, 0);
+
+          // 隱藏移動設備上的導航菜單
+          if (window.innerWidth <= 600) {
+            var links = document.querySelectorAll('nav .nav-link');
+            links.forEach(function(link) {
+              link.classList.remove('show');
             });
-
-            // 顯示選定的內容部分
-            var selectedContent = document.getElementById(sectionId);
-            selectedContent.classList.add('active');
-
-            // 自動滾動到選定的內容部分
-            setTimeout(function() {
-                selectedContent.scrollIntoView({ behavior: 'smooth' });
-            }, 0);
-        }
-    </script>
-    <script>
-      function adjustViewport() {
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  
-        console.log("User Agent: " + userAgent);
-  
-        // Detect if device is iOS
-        var isiOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-  
-        // Detect if device is Android
-        var isAndroid = /android/i.test(userAgent);
-  
-        console.log("Is iOS: " + isiOS);
-        console.log("Is Android: " + isAndroid);
-  
-        if (isiOS) {
-          // Adjust viewport for iOS devices
-          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-          console.log("Viewport adjusted for iOS");
-        } else if (isAndroid) {
-          // Adjust viewport for Android devices
-          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-          console.log("Viewport adjusted for Android");
-        } else {
-          // Default for other devices
-          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0');
-          console.log("Viewport adjusted for other devices");
-        }
-      }
-        // Run the function to adjust viewport on page load
-      window.onload = adjustViewport;
-    </script>
-    <script>
-      function toggleMenu() {
-        var links = document.querySelectorAll('nav a:not(.menu-item)');
-        links.forEach(function(link) {
-          if (link.classList.contains('show')) {
-            link.classList.remove('show');
-          } else {
-            link.classList.add('show');
           }
-        });
-      }
-    </script>
-    </div>
+        }
+
+        // 調整視口設置
+        function adjustViewport() {
+          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+          console.log("User Agent: " + userAgent);
+
+          // 檢測是否為iOS設備
+          var isiOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+          // 檢測是否為Android設備
+          var isAndroid = /android/i.test(userAgent);
+
+          console.log("Is iOS: " + isiOS);
+          console.log("Is Android: " + isAndroid);
+
+          if (isiOS) {
+            // 調整iOS設備的視口
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            console.log("Viewport adjusted for iOS");
+          } else if (isAndroid) {
+            // 調整Android設備的視口
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            console.log("Viewport adjusted for Android");
+          } else {
+            // 默認設置其他設備的視口
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0');
+            console.log("Viewport adjusted for other devices");
+          }
+        }
+
+        // 頁面加載時運行調整視口的函數
+        window.onload = adjustViewport;
+    </script> 
   </body>
 </html>
