@@ -687,6 +687,50 @@
           }
       }
   </style>
+  <style>
+    /* 基本導航樣式 */
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #000000;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* 移動設備上的導航樣式 */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        display: none; /* 默認隱藏鏈接 */
+        width: 100%; /* 鏈接全寬 */
+      }
+
+      nav a.menu-item {
+        display: block; /* 顯示菜單項 */
+        background-color: #000000;
+        text-align: left;
+      }
+    }
+
+    /* 顯示移動菜單的類 */
+    .show {
+      display: block !important;
+    }
+  </style>
   </head>
   <body>
     <nav>
@@ -1874,9 +1918,20 @@
           console.log("Viewport adjusted for other devices");
         }
       }
-  
-      // Run the function to adjust viewport on page load
+        // Run the function to adjust viewport on page load
       window.onload = adjustViewport;
+    </script>
+    <script>
+      function toggleMenu() {
+        var links = document.querySelectorAll('nav a:not(.menu-item)');
+        links.forEach(function(link) {
+          if (link.classList.contains('show')) {
+            link.classList.remove('show');
+          } else {
+            link.classList.add('show');
+          }
+        });
+      }
     </script>
     </div>
   </body>
