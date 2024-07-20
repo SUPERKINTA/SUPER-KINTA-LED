@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-  <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>
-      SUPER KINTA 汽車LED大燈 | 官方網頁 請支持正版店家拒絕盜版
-    </title>
-    <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPER KINTA 汽車LED大燈 | 官方網頁 請支持正版店家拒絕盜版</title>
+  <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -1623,7 +1621,7 @@
             <p>
               <strong>關注SUPER KINTA</strong>
             </p>
-            <a href="https://shopee.tw/elisa668" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台中新動力】" src="https://cd.nccu.edu.tw/uploads/company/c36b70ced7f9d04cf36dfb7c5687bc25.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台中新動力】</span></a> <a href="https://shopee.tw/bryan948888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台灣倍樂玩具】" src="https://cd.nccu.edu.tw/uploads/company/c36b70ced7f9d04cf36dfb7c5687bc25.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台灣倍樂玩具】</span></a> <a href="https://shopee.tw/bvyam94888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【貝樂創意工作室】" src="https://cd.nccu.edu.tw/uploads/company/c36b70ced7f9d04cf36dfb7c5687bc25.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【貝樂創意工作室】</span></a> <a href="https://www.youtube.com/@SUPERKINTA" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="YouTube" src="https://i.pinimg.com/736x/d2/0e/f6/d20ef62b2183376cbd6f1df28151edf1.jpg" style="width: 50px; margin-right: 5px;"> <span>官方SUPER KINTA 頻道</span></a>
+            <a href="https://shopee.tw/elisa668" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台中新動力】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台中新動力】</span></a> <a href="https://shopee.tw/bryan948888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【台灣倍樂玩具】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【台灣倍樂玩具】</span></a> <a href="https://shopee.tw/bvyam94888" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="蝦皮【貝樂創意工作室】" src="https://live.staticflickr.com/65535/53868752660_3919e8016d_o.png" style="width: 50px; margin-right: 5px;"> <span>蝦皮【貝樂創意工作室】</span></a> <a href="https://www.youtube.com/@SUPERKINTA" style="color: #00FAFE; text-decoration: none; display: flex; align-items: center;" target="_blank"><img alt="YouTube" src="https://i.pinimg.com/736x/d2/0e/f6/d20ef62b2183376cbd6f1df28151edf1.jpg" style="width: 50px; margin-right: 5px;"> <span>官方SUPER KINTA 頻道</span></a>
           </div>
         </div>
       </footer>
@@ -1846,6 +1844,39 @@
                 selectedContent.scrollIntoView({ behavior: 'smooth' });
             }, 0);
         }
+    </script>
+    <script>
+      function adjustViewport() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  
+        console.log("User Agent: " + userAgent);
+  
+        // Detect if device is iOS
+        var isiOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+  
+        // Detect if device is Android
+        var isAndroid = /android/i.test(userAgent);
+  
+        console.log("Is iOS: " + isiOS);
+        console.log("Is Android: " + isAndroid);
+  
+        if (isiOS) {
+          // Adjust viewport for iOS devices
+          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+          console.log("Viewport adjusted for iOS");
+        } else if (isAndroid) {
+          // Adjust viewport for Android devices
+          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+          console.log("Viewport adjusted for Android");
+        } else {
+          // Default for other devices
+          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0');
+          console.log("Viewport adjusted for other devices");
+        }
+      }
+  
+      // Run the function to adjust viewport on page load
+      window.onload = adjustViewport;
     </script>
     </div>
   </body>
