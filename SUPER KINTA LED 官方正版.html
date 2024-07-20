@@ -1983,5 +1983,30 @@
         // 頁面加載時運行調整視口的函數
         window.onload = adjustViewport;
     </script> 
+    <script>
+      function adjustLayout() {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        const screenWidth = window.innerWidth;
+        const header = document.querySelector('header');
+        const headerH1 = header.querySelector('h1');
+        const headerP = header.querySelector('p');
+  
+        if (isMobile) {
+          // 在移動設備上調整字體大小和位置
+          headerH1.style.fontSize = '2.5rem';
+          headerP.style.fontSize = '1rem';
+          header.style.padding = '30px 10px';
+        } else {
+          // 在桌面設備上恢覆默認字體大小和位置
+          headerH1.style.fontSize = '3rem';
+          headerP.style.fontSize = '1.2rem';
+          header.style.padding = '60px 20px';
+        }
+      }
+  
+      // 在頁面加載時和調整窗口大小時運行調整佈局的函數
+      window.addEventListener('load', adjustLayout);
+      window.addEventListener('resize', adjustLayout);
+    </script>
   </body>
 </html>
